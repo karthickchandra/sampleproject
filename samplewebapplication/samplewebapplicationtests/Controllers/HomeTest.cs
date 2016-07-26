@@ -18,5 +18,13 @@ namespace samplewebapplicationtests.Controllers
             var aboutResult =  homeController.About() as ViewResult;
             Assert.Equal("", aboutResult.ViewName);
         }
+
+        [Fact]
+        public void ContactSetsMessage()
+        {
+            HomeController homeController = new HomeController();
+            var aboutResult = homeController.Contact() as ViewResult;
+            Assert.Equal("", aboutResult.ViewName);
+        }
     }
 }
